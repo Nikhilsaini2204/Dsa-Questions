@@ -5,12 +5,7 @@ class Solution
         {
             int n = candies.size();
             vector<bool> result(n);
-            int max1 = candies[0];
-            for (int i = 0; i < n; i++)
-            {
-                if (candies[i] > max1)
-                    max1 = candies[i];
-            }
+            int max1 = *max_element(candies.begin(),candies.end());
             for (int i = 0; i < n; i++)
             {
                 if (candies[i] + extraCandies >= max1)
